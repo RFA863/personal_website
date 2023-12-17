@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import AOS from "aos";
+import { useState, useEffect } from "react";
 
 import Cbt from "./porto/Cbt";
 import Sersow from "./porto/Sersow";
@@ -9,6 +10,10 @@ import CompanyProfile from "./porto/CompanyProfile";
 import ManagementSystem from "./porto/ManagementSystem";
 
 export default function Blog() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   const [porto, setPorto] = useState(0);
 
@@ -51,33 +56,81 @@ export default function Blog() {
 
       <div className="flex justify-center py-10 gap-4 flex-wrap">
 
-        <div className="border border-white rounded-md  py-4 w-72 text-center 
+        <div data-aos="flip-down"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+
+          className="border border-white rounded-md  py-4 w-72 text-center 
         hover:bg-slate-300 hover:text-gray-800 cursor-pointer" onClick={() => setPorto(1)}>
           Medium Blog
         </div>
 
-        <div className="border border-white rounded-md py-4 w-72 text-center  
+        <div data-aos="flip-down"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+
+          className="border border-white rounded-md py-4 w-72 text-center  
         hover:bg-slate-300 hover:text-gray-800 cursor-pointer" onClick={() => setPorto(2)}>
           Sersow
         </div>
 
-        <div className="border border-white rounded-md py-4 w-72 text-center  
+        <div data-aos="flip-down"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+
+          className="border border-white rounded-md py-4 w-72 text-center  
         hover:bg-slate-300 hover:text-gray-800 cursor-pointer" onClick={() => setPorto(3)}>
           Computer Based Test (CBT)
         </div>
 
-        <div className="border border-white rounded-md py-4 w-72 text-center  
+        <div data-aos="flip-down"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+
+          className="border border-white rounded-md py-4 w-72 text-center  
         hover:bg-slate-300 hover:text-gray-800 cursor-pointer" onClick={() => setPorto(4)}>
           Management System
         </div>
 
-        <div className="border border-white rounded-md py-4 w-72 text-center  
+        <div data-aos="flip-down"
+          data-aos-offset="100"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+
+          className="border border-white rounded-md py-4 w-72 text-center  
         hover:bg-slate-300 hover:text-gray-800 cursor-pointer" onClick={() => setPorto(5)}>
           Company Profile
         </div>
       </div>
       {porto !== 0 &&
-        <div className=" border border-slate-600 rounded-lg sm:m-12 m-6  py-4  px-6">
+        <div data-aos="zoom-in"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="bottom"
+          className=" border border-slate-600 rounded-lg sm:m-12 m-6  py-4  px-6">
           {artikel}
         </div>}
 

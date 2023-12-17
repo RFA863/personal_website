@@ -1,16 +1,41 @@
+"use client";
+
+import AOS from 'aos';
+import { useEffect } from 'react';
 import Image from "next/image";
 
 import PP from "../../public/img/PP.jpg";
 
 export default function About() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <div id="about" className="flex sm:flex-nowrap flex-wrap  pt-24 pb-10 border-b-2 border-white">
 
-      <div className="flex justify-center items-center px-10 ">
+      <div data-aos="fade-down-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+        className="flex justify-center items-center px-10 ">
         <Image src={PP} className="rounded-full w-full" />
       </div>
 
-      <div className="text-justify sm:px-10 px-5 sm:pt-0 pt-8">
+      <div data-aos="fade-up-left"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+        className="text-justify sm:px-10 px-5 sm:pt-0 pt-8">
         <p className="font-semibold text-2xl border-b-2 border-white pb-3 pl-3 sm:text-left text-center">
           ABOUT ME
         </p>

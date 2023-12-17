@@ -1,12 +1,20 @@
+"use client";
+import AOS from "aos";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 
 import MediumImg from "../../../public/img/medium_img.png"
 
 export default function Medium({ closeArticle }) {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
-        <div>
+        <div data-aos="zoom-out">
 
             <div className="pb-4 sm:pl-4  mb-4 border-b border-slate-400 sm:text-lg text-sm font-semibold flex justify-between items-center" >
                 <Link href="https://medium.com/@rafifajrulariyadi"> Medium.com/@rafifajrulariyadi </Link>

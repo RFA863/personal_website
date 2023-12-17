@@ -1,4 +1,8 @@
+"use client";
+
+import AOS from "aos";
 import Image from "next/image";
+import { useEffect } from "react";
 import { TbBrandNextjs } from "react-icons/tb";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaReact, FaNode } from "react-icons/fa";
@@ -7,8 +11,13 @@ import { SiJavascript, SiTailwindcss, SiMysql, SiExpress } from "react-icons/si"
 import CahayaTerangImg from "../../../public/img/cahayaTerang_img.png"
 
 export default function CompanyProfile({ closeArticle }) {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
-        <div>
+        <div data-aos="zoom-out">
 
             <div className="pb-4 sm:pl-4 mb-4 border-b border-slate-400 sm:text-lg text-sm font-semibold flex justify-between items-center" >
                 Company Profile

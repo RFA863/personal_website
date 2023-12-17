@@ -1,20 +1,25 @@
-
-import { AiOutlineClose } from "react-icons/ai";
+"use client";
+import AOS from "aos";
+import { useEffect } from "react";
 import { FaJava } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 import { SiApachenetbeanside, SiMysql } from "react-icons/si";
 
 
 
 export default function Cbt({ closeArticle }) {
+
+    useEffect(() => {
+        AOS.init();
+    }, [])
+
     return (
-        <div>
+        <div data-aos="zoom-out">
 
             <div className="pb-4 sm:pl-4 mb-4 border-b border-slate-400 sm:text-lg text-sm font-semibold flex justify-between items-center" >
                 Computer Based Test (CBT)
                 <AiOutlineClose className="sm:text-3xl text-lg cursor-pointer" onClick={closeArticle} />
             </div>
-
-
 
 
             <div className="my-4 py-4 border-t border-slate-400 text-justify">
