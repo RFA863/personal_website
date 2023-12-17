@@ -11,9 +11,9 @@ export default function Sersow({ closeArticle }) {
     return (
         <div>
 
-            <div className="pb-4 pl-4 mb-4 border-b border-slate-400 text-lg font-semibold flex justify-between items-center" >
+            <div className="pb-4 sm:pl-4  mb-4 border-b border-slate-400 sm:text-lg test-sm font-semibold flex justify-between items-center" >
                 <Link href="https://sersow.com">  Sersow.com </Link>
-                <AiOutlineClose className="text-3xl cursor-pointer" onClick={closeArticle} />
+                <AiOutlineClose className="sm:text-3xl text-lg cursor-pointer" onClick={closeArticle} />
             </div>
 
 

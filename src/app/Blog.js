@@ -43,10 +43,10 @@ export default function Blog() {
       artikel = null;
   }
   return (
-    <div id="porto" >
+    <div id="blog" >
 
       <div className="flex justify-center pt-12   font-semibold text-2xl  ">
-        <p className="border-b-2 border-b-white pb-1 px-8">My Portofolio</p>
+        <p className="border-b-2 border-b-white pb-1 px-8">My blog</p>
       </div>
 
       <div className="flex justify-center py-10 gap-4 flex-wrap">
@@ -77,7 +77,7 @@ export default function Blog() {
         </div>
       </div>
       {porto !== 0 &&
-        <div className=" border border-slate-600 rounded-lg m-12  py-4  px-6">
+        <div className=" border border-slate-600 rounded-lg sm:m-12 m-6  py-4  px-6">
           {artikel}
         </div>}
 

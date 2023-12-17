@@ -8,17 +8,20 @@ import bgHero from "./../../public/img/bgHero.png";
 export default function Landing_Page() {
   return (
     <div id="hero" className="relative flex justify-center items-center">
-      <div className="px-10 py-8 backdrop-blur-lg absolute  z-[1]  rounded-md shadow-2xl shadow-black">
-        <div className="flex justify-center  text-7xl font-semibold border-b-2 border-white pb-5 ">
+
+      <div className="sm:px-10 px-5 py-8 backdrop-blur-lg absolute  z-[1]  rounded-md shadow-2xl shadow-black">
+
+        <div className="flex justify-center  sm:text-7xl text-2xl font-semibold border-b-2 border-white pb-5 ">
           RAFI FAJRUL ARIYADI
         </div>
-        <div className="flex justify-center text-3xl  px-4 py-2">
+
+        <div className="flex justify-center sm:text-3xl text-md sm:px-4 px-2 py-2">
           I Am a
-          <span className="ml-2 px-4  rounded-lg  font-semibold">
+          <span className="ml-2 sm:px-4  rounded-lg  font-semibold">
             <Typewriter
               words={['Software Engineer.', 'Software Developer.',
-                'Web Engineer.', 'Web Developer.', 'Front-End Web Developer.',
-                'Back-End Developer.', 'Full-Stack Developer.']}
+                'Web Engineer.', 'Web Developer.', 'Frontend Web Developer.',
+                'Backend Developer.', 'Full Stack Developer.']}
               cursor
               loop={0}
               typeSpeed={70}
@@ -27,7 +30,7 @@ export default function Landing_Page() {
           </span>
         </div>
       </div>
-      <Image src={bgHero} className="w-screen" />
+      <Image src={bgHero} className="sm:w-screen object-cover h-screen  " />
     </div>
   );
 }
