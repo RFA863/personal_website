@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0A1018;
+  --foreground: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-exo2: var(--font-exo2);
+  --font-orbitron: var(--font-orbitron);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:var(--font-exo2),var(--font-orbitron);
+}
